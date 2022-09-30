@@ -73,6 +73,7 @@ h3 {
     display: flex;
     justify-content: center;
 }
+
 .header__logo {
     margin: 3rem 0;
 }
@@ -276,6 +277,7 @@ h3 {
 
 .campos textarea {
     width: 100%;
+    height: 16rem;
 }
 
 .enviar {
@@ -293,6 +295,20 @@ h3 {
     font-size: large;
 }
 
+/* usuario */
+
+.user {
+    position: absolute;
+    right: 0;
+    align-self: center;
+    margin-right: 2rem;
+}
+
+.user__btn {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
 
 
 
