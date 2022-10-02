@@ -298,18 +298,35 @@ h3 {
 /* usuario */
 
 .user {
+    display: block;
     position: absolute;
+    align-items: center;
     right: 0;
-    align-self: center;
     margin-right: 2rem;
+    margin-top: 1.5rem;
+
 }
 
 .user__btn {
-    height: 10rem;
-    width: 10rem;
+    height: 8.7rem;
+    width: 8.7rem;
     border-radius: 50%;
+    background-image: url(../img/wo_user.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13.9rem;
+    margin-left: 11px;
+    margin-top: 12px; 
 }
 
+.user__init-sesion {
+    color: var(--blanco);
+    margin-top: 0;
+}
 
+.user__init-sesion:hover {
+    text-decoration: underline;
+    color: var(--secundario);
+}
 
 
