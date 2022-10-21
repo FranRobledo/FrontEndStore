@@ -115,6 +115,7 @@ h3 {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     gap: 2rem;
 }
 @media (min-width: 768px) {
@@ -130,7 +131,7 @@ h3 {
 }
 
 .producto__imagen {
-    width: 100%;
+    width: 1/8fr;
 }
 
 .producto__informacion {
