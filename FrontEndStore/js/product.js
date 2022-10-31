@@ -93,9 +93,9 @@ productos.forEach((product) => {
     content.innerHTML = `
         <a href="producto.html">
             <img src="${product.img}" class="producto__imagen">
-            <div class="producto__informacion">
-                <p class="producto__nombre">${product.nombre}</p>
-                <p class="producto__precio">$${product.precio}</p>
+            <div class="producto__informacion1">
+                <p class="producto__nombre1">${product.nombre}</p>
+                <p class="producto__precio1">$${product.precio}</p>
             </div>
         </a>
     `;
@@ -108,3 +108,9 @@ productos.forEach((product) => {
     content.append(comprar);
 })
 
+
+var operadorDeClases = () => {
+    for (let i = 1; i <= 14 ; i++){
+        console.log(i)
+    }
+}
