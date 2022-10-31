@@ -1,5 +1,3 @@
-const shopContent = document.getElementById('shopContent')
-
 const productos = [ 
     {
         id:1,
@@ -18,99 +16,82 @@ const productos = [
         nombre:"ReactJS",
         precio:25,
         img:"./img/3.png",
-    },
+    },    
     {
         id:4,
+        nombre: null,
+        precio: null,
+        img:"./img/grafico1.jpg",
+    },
+    {
+        id:5,
         nombre:"Redux",
         precio:25,
         img:"./img/4.png",
     },
     {
-        id:5,
+        id:6,
         nombre:"NodeJS",
         precio:25,
         img:"./img/5.png",
     },
     {
-        id:6,
+        id:7,
         nombre:"SASS",
         precio:25,
         img:"./img/6.png",
     },
     {
-        id:7,
+        id:8,
         nombre:"HTML5",
         precio:25,
         img:"./img/7.png",
     },
     {
-        id:8,
+        id:9,
         nombre:"GitHub",
         precio:25,
         img:"./img/8.png",
     },
     {
-        id:9,
+        id:10,
         nombre:"BulmaCSS",
         precio:25,
         img:"./img/9.png",
     },
     {
-        id:10,
+        id:11,
         nombre:"TypeScript",
         precio:25,
         img:"./img/10.png",
     },
     {
-        id:11,
+        id:12,
         nombre:"Drupal",
         precio:25,
         img:"./img/11.png",
     },
     {
-        id:12,
+        id:13,
+        nombre: null,
+        precio: null,
+        img:"./img/grafico2.jpg",
+    },
+    {
+        id:14,
         nombre:"JavaScript",
         precio:25,
         img:"./img/12.png",
     },
     {
-        id:13,
+        id:15,
         nombre:"GraphQL",
         precio:25,
         img:"./img/13.png",
     },
     {
-        id:14,
+        id:16,
         nombre:"WordPress",
         precio:25,
         img:"./img/14.png",
     }];
-
-let carrito = [];
-
-productos.forEach((product) => {
-    let content = document.createElement('div');
-    content.innerHTML = `
-        <a href="producto.html">
-            <img src="${product.img}" class="producto__imagen">
-            <div class="producto__informacion1">
-                <p class="producto__nombre1">${product.nombre}</p>
-                <p class="producto__precio1">$${product.precio}</p>
-            </div>
-        </a>
-    `;
-
-    shopContent.append(content);
-
-    let comprar = document.createElement('button');
-    comprar.innerText = 'comprar';
-
-    content.append(comprar);
-})
-
-
-var operadorDeClases = () => {
-    for (let i = 1; i <= 14 ; i++){
-        console.log(i)
-    }
-}
