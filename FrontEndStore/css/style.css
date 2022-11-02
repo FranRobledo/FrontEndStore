@@ -35,7 +35,7 @@ body {
 
 p {
     font-size: 1.8rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fuente);
     color: var(--blanco);
 }
 
@@ -334,12 +334,22 @@ h3 {
 
 
 /* carrito/cart */
+@media (max-width: 768px) {
+    .modal-content p h3{
+        font-size: small;
+    }
+    .modal-header h1{
+        font-size: medium;
+    }
+    .total-content h2{
+        font-size: medium;
+    }
+}
 
 .modal-container {
     width: 80%;
-    margin: 0 10%;
     max-height: 88vh;
-    color: #FFF;
+    color: var(--blanco);
     background-color: #121212;
     display: flex;
     flex-direction: column;
@@ -350,6 +360,8 @@ h3 {
     z-index: 9;
     top: 3vh;
     bottom: auto;
+    right: 10%;
+    left: 10%;
     scrollbar-color: none;
 }
 
@@ -362,7 +374,7 @@ h3 {
     display: flex;
     justify-content: space-around;
     background-color: #0a0909;
-    color: #FFF;
+    color: var(--blanco);
     width: 100%;
 }
 
@@ -395,3 +407,22 @@ h3 {
     padding-top: 20px;
 }
 
+/* Delete button product*/
+.delete-product {
+    cursor: pointer;
+}
+
+/* CarritoCounter
+.cantidad-carrito {
+    background-color: var(--negro);
+    color: var(--blanco);
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 19rem;
+    right: 45rem;
+    position: absolute;
+    display: none;
+    width: 1.6rem;
+    height: 2rem;
+} */

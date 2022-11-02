@@ -1,45 +1,9 @@
-const shopContent = document.getElementById('shopContent');
-const verCarrito = document.getElementById('verCarrito')
-const comprar = document.getElementById('comprar');
+const verCarrito = document.getElementById('verCarrito');
 const modalContainer = document.getElementById('modalContainer');
+const cantidadCarrito = document.getElementById('cantidadCarrito');
 
-let carrito = [];
-
-productos.forEach((product) => {
-    let content = document.createElement('div');
-    content.className = 'producto'
-    content.innerHTML = `
-        <a href="producto.html">
-            <div class="shadow">
-                <img src="${product.img}" class="producto__imagen">
-                <div class="producto__informacion">
-                    <p class="producto__nombre">${product.nombre}</p>
-                    <p class="producto__precio">$${product.precio}</p>
-                </div>
-            </div>
-        </a>
-    `;
-    // <button id="comprar" class="producto__boton">Comprar</button>
-    shopContent.append(content);
-
-    let comprar = document.createElement('button');
-    comprar.innerText = 'Comprar';
-    comprar.className = 'producto__boton'
-
-    content.append(comprar);
-
-    comprar.addEventListener("click", () => {
-        carrito.push({
-            id: product.id,
-            img: product.img,
-            nombre: product.nombre,
-            precio: product.precio,
-        });
-        console.log(carrito)
-    });
-});
-
-verCarrito.addEventListener('click', () => {
+/*Funcion para crear el carrito y manipulacion del DOM - Creacion del modal*/
+const pintarCarrito =  () => {
     modalContainer.innerHTML = '';
     modalContainer.style.display = 'flex';
 
@@ -51,7 +15,7 @@ verCarrito.addEventListener('click', () => {
     modalContainer.append(modalHeader);
     
     const modalButton = document.createElement('h1');
-    modalButton.innerText = 'x';
+    modalButton.innerText = 'salir';
     modalButton.className = 'modal-header-button';
 
     modalButton.addEventListener('click', () => {
@@ -67,16 +31,43 @@ verCarrito.addEventListener('click', () => {
             <img src="${product.img}">
             <h3>${product.nombre}</h3>
             <p>$${product.precio}</p>
+            <p>Cantidad: ${product.cantidad}
+            <p>Total: $${product.cantidad * product.precio}</p>
         `;
         modalContainer.appendChild(carritoContent)
+
+        let eliminar = document.createElement('span');
+        eliminar.innerHTML = '❌';
+        eliminar.className = 'delete-product';
+        carritoContent.append(eliminar);
+
+        eliminar.addEventListener('click', eliminarProducto)
     });
 
-    const total = carrito.reduce((acumulador, price) => acumulador + price.precio, 0);
+    const total = carrito.reduce((acumulador, price) => acumulador + price.precio * price.cantidad, 0);
     const totalBuying = document.createElement('div');
     totalBuying.className = 'total-content';
     totalBuying.innerHTML = `
         <h2> Total a pagar $${total}</h2>
     `;
     modalContainer.append(totalBuying);
-});
+};
 
+/*Delete product function - Funcion para eliminar productos*/
+const eliminarProducto = () => {
+    const foundId = carrito.find((element) => element.id);
+
+    carrito = carrito.filter((carritoId) => {
+        return carritoId !== foundId;
+    });
+    pintarCarrito()
+};
+
+/*Cart elements/products counter function - Funcion para contar la cantidad de elementos o productos guardados en el carrito*/
+// const carritoCounter = () => {
+//     cantidadCarrito.style.display = 'block';
+//     cantidadCarrito.innerText = carrito.length;
+// }
+
+/*Evento para hacer aparecer el carrito*/
+verCarrito.addEventListener('click', pintarCarrito);
