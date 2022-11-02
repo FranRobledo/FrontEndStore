@@ -119,6 +119,8 @@ h3 {
     margin-left: 1.5rem;
     margin-bottom: 0;
     margin-top: 0;
+    margin-left: 0;
+    cursor: pointer;
 }
 
 /** Flex **/
@@ -331,5 +333,65 @@ h3 {
 }
 
 
+/* carrito/cart */
 
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #FFF;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*for the top*/
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 3vh;
+    bottom: auto;
+    scrollbar-color: none;
+}
+
+/*para desaparecer la barra de scroll*/
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a0909;
+    color: #FFF;
+    width: 100%;
+}
+
+.modal-header-title {
+    justify-self: start;
+}
+
+.modal-header-button {
+    cursor: pointer;
+}
+
+.modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.modal-container > div > img{
+    height: 120px;
+    width: 120px;
+}
+
+.total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
 

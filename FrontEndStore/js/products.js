@@ -14,15 +14,15 @@ const productos = [
     {
         id:3,
         nombre:"ReactJS",
-        precio:25,
+        precio:2,
         img:"./img/3.png",
     },    
-    {
-        id:4,
-        nombre: null,
-        precio: null,
-        img:"./img/grafico1.jpg",
-    },
+    // {
+    //     id:4,
+    //     nombre: null,
+    //     precio: null,
+    //     img:"./img/grafico1.jpg",
+    // },
     {
         id:5,
         nombre:"Redux",
@@ -32,25 +32,25 @@ const productos = [
     {
         id:6,
         nombre:"NodeJS",
-        precio:25,
+        precio:30,
         img:"./img/5.png",
     },
     {
         id:7,
         nombre:"SASS",
-        precio:25,
+        precio:20,
         img:"./img/6.png",
     },
     {
         id:8,
         nombre:"HTML5",
-        precio:25,
+        precio:20,
         img:"./img/7.png",
     },
     {
         id:9,
         nombre:"GitHub",
-        precio:25,
+        precio:20,
         img:"./img/8.png",
     },
     {
@@ -71,12 +71,12 @@ const productos = [
         precio:25,
         img:"./img/11.png",
     },
-    {
-        id:13,
-        nombre: null,
-        precio: null,
-        img:"./img/grafico2.jpg",
-    },
+    // {
+    //     id:13,
+    //     nombre: null,
+    //     precio: null,
+    //     img:"./img/grafico2.jpg",
+    // },
     {
         id:14,
         nombre:"JavaScript",
@@ -86,12 +86,12 @@ const productos = [
     {
         id:15,
         nombre:"GraphQL",
-        precio:25,
+        precio:35,
         img:"./img/13.png",
     },
     {
         id:16,
         nombre:"WordPress",
-        precio:25,
+        precio:69,
         img:"./img/14.png",
     }];
