@@ -1,16 +1,13 @@
 
 const datos = {
-    nombre: '',
-    teledono: '',
-    email: '',
-    mensaje: '',
+
 }; 
 
 const nombre = document.querySelector('#Nombre');
 const telefono = document.querySelector('#Telefono');
 const gmail = document.querySelector('#Gmail');
 const mensaje = document.querySelector('#Mensaje');
-const formulario = document.querySelector('SubmitBott')
+const formulario_contacto = document.querySelector('#contacto_submitbutton')
 
 nombre.addEventListener('input', leerTexto);
 telefono.addEventListener('input', leerTexto);
@@ -19,7 +16,7 @@ mensaje.addEventListener('input', leerTexto);
 
 //Evento Submit
 
-formulario.addEventListener('submit', function(event){
+formulario_contacto.addEventListener('submit', function(event){
     event.preventDefault();
 
 
