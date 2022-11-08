@@ -139,6 +139,7 @@ h3 {
     background-color: var(--primarioOscuro);
 }
 
+
 .producto__imagen {
     width: 1/8fr;
 }
@@ -174,6 +175,10 @@ h3 {
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+}
+
+.producto__boton:hover {
+    background-color: #595959;
 }
 
 /** Gráfico **/
@@ -426,3 +431,81 @@ h3 {
     width: 1.6rem;
     height: 2rem;
 } */
+
+
+/*COOKIES*/
+
+.aviso-cookies {
+    display: block;
+    background-color: var(--blanco);
+    padding: 2rem;
+    width: calc(100%-4rem);
+    height: 50rem;
+    max-width: 40rem;
+    line-height: 150%;
+    border-radius: 10%;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 100;
+    padding-top: 6rem;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.aviso-cookies p, h3{
+    color: var(--negro);
+}
+
+.galleta {
+    max-width: 30rem;
+    position: absolute;
+    top: -5rem;
+    left: calc(50% - 15rem);
+}
+
+.titulo-cookies {
+    margin-top: 21rem;
+}
+
+.boton-cookies {
+    width: 100%;
+    background: #595959;
+    border: none;
+    color: var(--blanco);
+    font-family: var(--fuente);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.boton-cookies:hover {
+    background-color: var(--negro);
+}
+
+.enlace-cookies {
+    color: #4DBFFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.enlace-cookies:hover {
+    text-decoration: underline;
+}
+
+.fondo-avisos-cookies {
+    display: block;
+    background-color: rgba(0, 0, 0, 20);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
