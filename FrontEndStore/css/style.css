@@ -436,7 +436,7 @@ h3 {
 /*COOKIES*/
 
 .aviso-cookies {
-    display: block;
+    display: none;
     background-color: var(--blanco);
     padding: 2rem;
     width: calc(100%-4rem);
@@ -451,6 +451,10 @@ h3 {
     padding-top: 6rem;
     box-shadow: var(--sombra);
     text-align: center;
+}
+
+.activo-cookies {
+    display: block;
 }
 
 .aviso-cookies p, h3{
@@ -500,7 +504,7 @@ h3 {
 }
 
 .fondo-avisos-cookies {
-    display: block;
+    display: none;
     background-color: rgba(0, 0, 0, 20);
     position: fixed;
     z-index: 99;
