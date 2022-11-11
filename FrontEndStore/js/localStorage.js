@@ -1,5 +1,5 @@
 
-const formulario = document.getElementById('formulario');
+const formularioLS = document.getElementById('formulario');
 
 /* Funcion localSorage */
 const adduser = (e) => {
@@ -21,4 +21,4 @@ const adduser = (e) => {
 };
 
 
-formulario.addEventListener('submit', adduser())
+formularioLS.addEventListener('submit', adduser())
