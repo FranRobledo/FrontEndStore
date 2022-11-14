@@ -113,16 +113,13 @@ formulario.addEventListener('submit', (e) => {
 ///INICIO DE SESION///
 
 const sesionInit = document.getElementById('user');
-const sesionModal  = document.getElementById('user__modal');
+const sesionModal  = document.getElementById('userModal');
+const closeSesionModal = document.getElementById('closeSesionModal');
 
 sesionInit.addEventListener('click', () => {
-	console.log("pene");
-	let sesionContent = document.createElement('div');
-	sesionContent.className = 'user_modal-sesion';
-	sesionContent.innerHTML = `
-		<h3>Inicie Sesion</h3>
-		<input id="input__username" type="text" placeholder="Usuario">
-		<input id="input__password" type="text" placeholder="Contraseña">
-	`
+	document.getElementById('userModal').classList.add('display_flex');
+});
 
+closeSesionModal.addEventListener('click', () => {
+	document.getElementById('userModal').classList.remove('display_flex');
 })

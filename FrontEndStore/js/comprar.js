@@ -7,15 +7,15 @@ productos.forEach((product) => {
     let content = document.createElement('div');
     content.className = 'producto'
     content.innerHTML = `
-        <a href="producto.html">
-            <div class="shadow">
+        
+            <div class="shadow" id="productoIndex">
                 <img src="${product.img}" class="producto__imagen">
                 <div class="producto__informacion">
                     <p class="producto__nombre">${product.nombre}</p>
                     <p class="producto__precio">$${product.precio}</p>
                 </div>
             </div>
-        </a>
+        
     `;
     shopContent.append(content);
 
@@ -23,7 +23,7 @@ productos.forEach((product) => {
     comprar.innerText = 'Añadir al Carrito';
     comprar.className = 'producto__boton'
 
-    content.append(comprar);
+    content.appendChild(comprar);
 
     comprar.addEventListener("click", () => {
         const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);

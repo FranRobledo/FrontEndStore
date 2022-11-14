@@ -141,7 +141,7 @@ h3 {
     .navegacion {
         display: grid;
         text-align: center;
-        
+        place-items: center;
     }
     .navegacion__enlace {
         font-size: 2.2rem;
@@ -383,6 +383,62 @@ h3 {
 .user__init-sesion:hover {
     text-decoration: underline;
     color: var(--secundario);
+    cursor: pointer;
+}
+
+.user__modal {
+    position: fixed;
+    background-color: var(--blanco);
+    top: 16.5rem;
+    left: 80%;
+    right: 5%;
+    width: 15rem;
+    border-radius: 2%;
+    background-color: #b05bbe;
+    box-shadow: var(--sombra);
+    display: none;
+
+}
+
+.display_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sesion_title {
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.input__password, .input__username {
+    width: 15rem;
+    font-family: var(--fuente);
+}
+
+.sesion_button {
+    background-color: var(--primarioOscuro);
+    border: none;
+    font-family: var(--fuente);
+    width: 10rem;
+    height: 3rem;
+    margin-top: 2rem;
+}
+
+.close_sesion_modal {
+    cursor: pointer;
+}
+
+@media (max-width: 900px){
+    .user__modal {
+        width: 80%;
+        right: 10%;
+        left: 10%;
+        border-radius: 0%;
+    }
+    .input__username, .input__password {
+        width: 80%;
+    }
 }
 
 @media (max-width: 600px){
@@ -425,6 +481,17 @@ h3 {
     scrollbar-color: none;
 }
 
+@media (max-width: 750px){
+    .modal-container {
+        width: 90%;
+        right: 5%;
+        left: 5%;
+    }
+    .modal-container > .modal-content {
+        flex-direction: column;
+    }
+}
+
 /*para desaparecer la barra de scroll*/
 .modal-container::-webkit-scrollbar {
     display: none;
@@ -448,7 +515,6 @@ h3 {
 
 .modal-container > .modal-content {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 70%;
