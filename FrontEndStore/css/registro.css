@@ -125,7 +125,7 @@ main {
 .formulario__grupo-btn-enviar {
 	display: flex;
 	flex-direction: column;
-	
+	grid-row: 5;
 }
 
 .formulario__btn {
@@ -138,6 +138,7 @@ main {
 	border-radius: 3px;
 	cursor: pointer;
 	transition: .1s ease all;
+	margin-bottom: 2rem;
 }
 
 .formulario__btn:hover {
