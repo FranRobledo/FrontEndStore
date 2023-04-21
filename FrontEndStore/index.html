@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PTVS9W7');</script>
+    <!-- End Google Tag Manager -->
+
     <title>FrontEndStore</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,16 +24,26 @@
 </head>
 <body>
     
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTVS9W7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header class="header">
         <a href="index.html">
             <img class="header__logo" src="./img/logo.png" alt="Logotipo">
         </a>
 
-        <div class="user">
-            <button type="button" class="user__btn"></button>
-            <a href="registro.html">
-                <p class="user__init-sesion">Inicia sesión</p>
-            </a>
+        <div class="user" id="user">
+            <button id="" type="button" class="user__btn"></button>
+            <p id="sesion__init" class="user__init-sesion">Inicia sesión</p>
+        </div>
+        <div class="user__modal" id="userModal">
+            <h3 class="sesion_title">Inicie Sesion</h3>
+            <input class="input__username" id="input__username" type="text" placeholder="Usuario">
+            <input class="input__password" id="input__password" type="text" placeholder="Contraseña">
+            <button class="sesion_button" type="submit">Enviar</button>
+            <p class="close_sesion_modal" id="closeSesionModal">❌</p>
         </div>
     </header>
 
@@ -33,144 +52,31 @@
         <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
         <a class="navegacion__enlace" href="contacto.html">Contacto</a>
         <a class="navegacion__enlace" href="registro.html">Tu Cuenta</a>
+        <a class="navegacion__enlace ver-carrito" id="verCarrito" >Carrito<span id="cantidadCarrito" class="cantidad-carrito"></span></a>
+        
+
     </nav>
 
     <main class="contenedor">
         <h1>Nuestros Productos</h1>
-        
+
+        <!--shop content - contenido de compra-->
         <div class="grid">
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/1.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">VueJS</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/2.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">AngularJS</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/3.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">ReactJS</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/4.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">Redux</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/5.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">NodeJS</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/6.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">SASS</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/7.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">HTML5</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/8.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">GitHub</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/9.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">BulmaCSS</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/10.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">TypeScript</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/11.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">Drupal</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/12.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">JavaScript</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/13.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">GraphQL</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="producto.html">
-                    <img src="./img/14.png" alt="imagen camisa" class="producto__imagen">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">WordPress</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="grafico grafico__camisas"></div>
-            <div class="grafico grafico__node"></div>
+            <div class="shop-content" id="shopContent"></div>
         </div>
-    
+
+        <!--modal container - contenedor de la interfaz del carrito-->
+        <div class="modal-container" id="modalContainer"></div>
     </main>
 
+    <div class="aviso-cookies" id="aviso-cookies">
+        <img class="galleta" src="./img/cookie.svg" alt="cookie">
+        <h3 class="titulo-cookies">Cookies</h3>
+        <p class="parrafo-cookies">Utilizamos cookies propias para mejorar la calidad de su experiencia y seguridad.</p>
+        <button class="boton-cookies" id="btn-aceptar-cookies">De acuerdo</button>
+        <a href="aviso-cookies.html" class="enlace-cookies">Aviso de cookies</a>
+    </div>
+    <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
 
     <footer class="footer">
         <p class="footer__texto">© 2022 Front End Store - Todos los derechos reservados.</p>
@@ -178,5 +84,11 @@
 
     <script src="./js/registro.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/comprar.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/cookies.js"></script>
+    <script src="./js/producto.js"></script>
+
 </body>
 </html>

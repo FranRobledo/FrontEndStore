@@ -90,11 +90,9 @@ inputs.forEach((input) => {
 /* Evento de submit y aparicion de mensajes de error y exito */ 
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-
 	const terminos = document.getElementById('terminos');
 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
 		formulario.reset();
-
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
@@ -110,3 +108,18 @@ formulario.addEventListener('submit', (e) => {
         }, 4000);
 	}
 });
+
+
+///INICIO DE SESION///
+
+const sesionInit = document.getElementById('user');
+const sesionModal  = document.getElementById('userModal');
+const closeSesionModal = document.getElementById('closeSesionModal');
+
+sesionInit.addEventListener('click', () => {
+	document.getElementById('userModal').classList.add('display_flex');
+});
+
+closeSesionModal.addEventListener('click', () => {
+	document.getElementById('userModal').classList.remove('display_flex');
+})

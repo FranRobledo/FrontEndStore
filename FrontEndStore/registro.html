@@ -17,19 +17,11 @@
   </head>
 
   <body>
-    
     <header class="header">
       <a href="index.html">
-          <img class="header__logo" src="./img/logo.png" alt="Logotipo">
+        <img class="header__logo" src="./img/logo.png" alt="Logotipo" />
       </a>
-
-      <div class="user">
-          <button type="button" class="user__btn"></button>
-          <a href="registro.html">
-              <p class="user__init-sesion">Inicia sesión</p>
-          </a>
-      </div>
-  </header>
+    </header>
 
     <nav class="navegacion">
       <a class="navegacion__enlace" href="index.html">Tienda</a>
@@ -162,12 +154,15 @@
 
         <div class="formulario__mensaje" id="formulario__mensaje">
           <p>
-            <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Algún campo incorrecto
+            <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Algún o algunos campos incorrectos
           </p>
         </div>
 
         <div class="formulario__grupo formulario__grupo-btn-enviar">
           <button type="submit" class="formulario__btn">Enviar</button>
+          <a href="./targetacredito.html" class="">
+            <button type="button" class="formulario__btn">Métodos de pago</button>
+          </a>
           <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
             Formulario enviado exitosamente!
           </p>
@@ -177,5 +172,6 @@
 
     <script src="./js/registro.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/localStorage.js"></script>
   </body>
 </html>
