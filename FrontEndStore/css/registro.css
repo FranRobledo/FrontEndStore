@@ -190,5 +190,10 @@ main {
 	}
 }
 
+/* Log In */
 
+.modal_login{
+	box-shadow: var(--sombra);
+	
+}
 
