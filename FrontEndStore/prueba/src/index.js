@@ -1,3 +1,13 @@
+// /* Conexión a base de datos */
+// const mongoose = require('mongoose');
+
+// const mongouser = '';
+// const mongopassword = '';
+// const uri = '';
+// mongoose.connect(uri)
+//     .then(() => console.log('Base de datos conectada'))
+//     .catch(e => console.log('Error de conexión', e))
+// ;
 
 
 /* Upload images //START// */
@@ -49,3 +59,17 @@ app.listen(app.get('port'), () => {
 })
 
 /* Upload image //END// */
+
+// /* Agregado de HTML*/
+// const agrUpload = document.getElementById('upload__image');
+
+// agrUpload.innerHTML = `
+
+//     <form action="/upload" method="POST" enctype="multipart/form-data">
+//         <input type="file" name="image">
+//         <button type="submit">
+//             Upload
+//         </button>
+//     </form>
+
+// `;

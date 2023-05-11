@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/upload', (req, res) => {
-    console.log(req.file);
+    console.log('Imagen cargada', req.file);
     res.send('uploaded')
 });
 
