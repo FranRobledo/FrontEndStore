@@ -1,13 +1,13 @@
-// /* Conexión a base de datos */
-// const mongoose = require('mongoose');
+/* Conexión a base de datos */
+const mongoose = require('mongoose');
 
-// const mongouser = '';
-// const mongopassword = '';
-// const uri = '';
-// mongoose.connect(uri)
-//     .then(() => console.log('Base de datos conectada'))
-//     .catch(e => console.log('Error de conexión', e))
-// ;
+const mongouser = 'fran_rob';
+const mongopassword = 'nurHX6Un0mDXcOSW';
+const uri = `mongodb+srv://${mongouser}:${mongopassword}@cluster0.sqkkhqh.mongodb.net/`;
+mongoose.connect(uri)
+    .then(() => console.log('Base de datos conectada'))
+    .catch(e => console.log('Error de conexión', e))
+;
 
 
 /* Upload images //START// */
@@ -52,6 +52,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //Routes
 app.use(require('./routes/index.routes.js'));
+app.use(require('./routes/Usuarios'))
 
 //Start the server
 app.listen(app.get('port'), () => {
@@ -60,16 +61,3 @@ app.listen(app.get('port'), () => {
 
 /* Upload image //END// */
 
-// /* Agregado de HTML*/
-// const agrUpload = document.getElementById('upload__image');
-
-// agrUpload.innerHTML = `
-
-//     <form action="/upload" method="POST" enctype="multipart/form-data">
-//         <input type="file" name="image">
-//         <button type="submit">
-//             Upload
-//         </button>
-//     </form>
-
-// `;
