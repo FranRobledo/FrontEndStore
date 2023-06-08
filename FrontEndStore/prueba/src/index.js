@@ -15,6 +15,7 @@ const express  = require('express');
 const path = require ('path');
 const multer = require('multer');
 const uuid = require('uuid');
+const uniqueId = uuid.v4();
 
 //Initializations 
 const app = express();
@@ -28,7 +29,7 @@ app.set('view engine', 'ejs');
 const storage = multer.diskStorage({
     destination: path.join(__dirname, 'img/public/upload'),
     filename: (req, file, cb) => {
-        cb(null, file.originalname);
+        cb(null, uniqueId + path.extname(file.originalname));
     }
 })
 
