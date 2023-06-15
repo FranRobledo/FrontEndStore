@@ -1,14 +1,13 @@
 /* Conexión a base de datos */
 const mongoose = require('mongoose');
 
-const mongouser = 'fran_rob';
-const mongopassword = 'nurHX6Un0mDXcOSW';
-const uri = `mongodb+srv://${mongouser}:${mongopassword}@cluster0.sqkkhqh.mongodb.net/`;
+const mongouser = 'fran';
+const mongopassword = 'caca';
+const uri = `mongodb://fran:caca@localhost:27017/?authSource=admin`;
 mongoose.connect(uri)
     .then(() => console.log('Base de datos conectada'))
     .catch(e => console.log('Error de conexión', e))
 ;
-
 
 /* Upload images //START// */
 const express  = require('express');
@@ -51,9 +50,14 @@ app.use(multer({
 //Static Files
 app.use(express.static(path.join(__dirname, 'public')))
 
+const router_user = require('./routes/usuarios');
+//Middleware
+app.use(express.json());
+app.use('/api', router_user);
+
 //Routes
 app.use(require('./routes/index.routes.js'));
-app.use(require('./routes/Usuarios'))
+// app.use(require('./routes/usuarios'))
 
 //Start the server
 app.listen(app.get('port'), () => {
