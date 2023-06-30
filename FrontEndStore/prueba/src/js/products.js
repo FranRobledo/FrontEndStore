@@ -5,6 +5,7 @@ const productos = [
         precio:25,
         img:"./img/1.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:2,
@@ -12,6 +13,7 @@ const productos = [
         precio:25,
         img:"./img/2.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:3,
@@ -19,6 +21,7 @@ const productos = [
         precio:2,
         img:"./img/3.png",
         cantidad: 1,
+        stock: 3
     },    
     // {
     //     id:4,
@@ -32,6 +35,7 @@ const productos = [
         precio:25,
         img:"./img/4.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:6,
@@ -39,6 +43,7 @@ const productos = [
         precio:30,
         img:"./img/5.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:7,
@@ -46,6 +51,7 @@ const productos = [
         precio:20,
         img:"./img/6.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:8,
@@ -53,6 +59,7 @@ const productos = [
         precio:20,
         img:"./img/7.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:9,
@@ -60,6 +67,7 @@ const productos = [
         precio:20,
         img:"./img/8.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:10,
@@ -67,6 +75,7 @@ const productos = [
         precio:25,
         img:"./img/9.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:11,
@@ -74,6 +83,7 @@ const productos = [
         precio:25,
         img:"./img/10.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:12,
@@ -81,6 +91,7 @@ const productos = [
         precio:25,
         img:"./img/11.png",
         cantidad: 1,
+        stock: 3
     },
     // {
     //     id:13,
@@ -94,6 +105,7 @@ const productos = [
         precio:25,
         img:"./img/12.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:15,
@@ -101,6 +113,7 @@ const productos = [
         precio:35,
         img:"./img/13.png",
         cantidad: 1,
+        stock: 3
     },
     {
         id:16,
@@ -108,4 +121,5 @@ const productos = [
         precio:69,
         img:"./img/14.png",
         cantidad: 1,
+        stock: 3
     }];

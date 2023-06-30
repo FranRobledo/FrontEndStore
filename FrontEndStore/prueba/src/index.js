@@ -48,16 +48,16 @@ app.use(multer({
 }).single('image'));
 
 //Static Files
-app.use(express.static(path.join(__dirname, 'public')))
-
-const router_user = require('./routes/usuarios');
-//Middleware
-app.use(express.json());
-app.use('/api', router_user);
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes
 app.use(require('./routes/index.routes.js'));
-// app.use(require('./routes/usuarios'))
+app.use(require('./routes/usuarios'));
+const userRoutes = require('./routes/usuarios');
+
+//Middleware
+app.use(express.json());
+app.use('/api', userRoutes);
 
 //Start the server
 app.listen(app.get('port'), () => {

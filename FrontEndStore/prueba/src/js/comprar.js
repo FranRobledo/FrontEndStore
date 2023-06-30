@@ -13,6 +13,7 @@ productos.forEach((product) => {
                 <div class="producto__informacion">
                     <p class="producto__nombre">${product.nombre}</p>
                     <p class="producto__precio">$${product.precio}</p>
+                    <p class="producto__nombre">Stock: ${product.stock}</p>
                 </div>
             </div>
         
@@ -27,7 +28,9 @@ productos.forEach((product) => {
 
     comprar.addEventListener("click", () => {
         const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
-        
+        product.stock -= 1;
+
+
         if (repeat) {
             carrito.map((prod) => {
                 if (prod.id === product.id) {
