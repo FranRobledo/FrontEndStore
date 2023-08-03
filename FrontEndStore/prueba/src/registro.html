@@ -32,7 +32,7 @@
 
     <main class="contenedor">
 
-      <form action="" class="formulario" id="formulario">
+      <form action="/usuarios/registro" class="formulario" id="formulario" method="POST">
         <!-- Grupo: Usuario -->
         <div class="formulario__grupo" id="grupo__usuario">
           <label for="usuario" class="formulario__label">Usuario</label>
@@ -160,17 +160,16 @@
         </div>
 
         <div class="formulario__grupo formulario__grupo-btn-enviar">  
-            <button type="submit" class="formulario__btn" id="">Registrar</button>
+            <button type="submit" class="formulario__btn" id="register_button">Registrar</button>
             <label class="formulario__label">¿Ya tenes una cuenta? Inicia sesión</label>
             <button class="formulario__btn" id="verlogin">Iniciar seción</button>
           <!-- <a href="./targetacredito.html" class="">
             <button type="button" class="formulario__btn">Métodos de pago</button>
           </a> -->
           <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
-            Formulario enviado exitosamente!
+            Formulario enviado exitosamenttargete!
           </p>
         </div>
-      
       </form>
 
       <!--MODAL PARA EL LOG IN-->
@@ -184,6 +183,5 @@
 
     <script src="./js/registro.js"></script>
     <script src="./js/app.js"></script>
-    <script src="./js/localStorage.js"></script>
   </body>
 </html>

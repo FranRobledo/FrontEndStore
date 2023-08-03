@@ -1,0 +1,8 @@
+//Para instalar el framework de multer para la subida de archivos desde el administrador de archivos
+npm i express ejs multer
+
+//npm i uuid
+para instalar el modulo de nombres de archivos
+
+//Utilizo multer para cargar imagenes y modificar sus propiedades en el back, le cambio el nombre
+el cual se guarda con uuid para que sea unico

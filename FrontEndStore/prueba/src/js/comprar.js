@@ -4,6 +4,8 @@ const comprar = document.getElementById('comprar');
 let carrito = [];
 
 productos.forEach((product) => {
+    if (product.exposicion){
+
     let content = document.createElement('div');
     content.className = 'producto'
     content.innerHTML = `
@@ -13,10 +15,8 @@ productos.forEach((product) => {
                 <div class="producto__informacion">
                     <p class="producto__nombre">${product.nombre}</p>
                     <p class="producto__precio">$${product.precio}</p>
-                    <p class="producto__nombre">Stock: ${product.stock}</p>
                 </div>
             </div>
-        
     `;
     shopContent.append(content);
 
@@ -27,17 +27,24 @@ productos.forEach((product) => {
     content.appendChild(comprar);
 
     comprar.addEventListener("click", () => {
+
         const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
         product.stock -= 1;
+        console.log(product.stock);
+        console.log(product.exposicion);
+        console.log(repeat);
 
 
+        
         if (repeat) {
             carrito.map((prod) => {
                 if (prod.id === product.id) {
                     prod.cantidad++;
-                }
+                } if (prod.cantidad >= product.cantidad){
+                    product.exposicion = false;
+                };
             });
-        } else {
+        } else {    
             carrito.push({
                 id: product.id,
                 img: product.img,
@@ -47,7 +54,15 @@ productos.forEach((product) => {
             });
             console.log(carrito);
             // carritoCounter()
-        }
-    });
+            };
+        });
+    };
+    if (!product.exposicion){
+        let content = document.createElement('div');
+        content.className = 'producto'
+        content.innerHTML = `
+        `;
+        shopContent.append(content);
+    }
 });
 

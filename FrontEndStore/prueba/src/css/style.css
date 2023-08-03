@@ -368,7 +368,7 @@ h3 {
     height: 8.7rem;
     width: 8.7rem;
     border-radius: 50%;
-    background-image: url(../img/wo_user.jpg);
+    background-image: url(../../Backend/public/uploads/wo_user.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 13.9rem;

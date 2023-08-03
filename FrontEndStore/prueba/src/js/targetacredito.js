@@ -1,6 +1,3 @@
-
-
-
 const tarjeta = document.querySelector('#tarjeta'),
 btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
 formulario = document.querySelector('#formulario-tarjeta'),

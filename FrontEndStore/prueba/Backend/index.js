@@ -5,6 +5,7 @@ const path = require('path');
 const multer = require('multer');
 const uuid = require('uuid');
 const cors = require('cors')
+
 //Configuración de la conexión a la base de datos
 const mongouser = 'fran';
 const mongopassword = 'caca';
@@ -29,6 +30,7 @@ const storage = multer.diskStorage({
     const uniqueFileName = uuid.v4() + fileExt;
     cb(null, uniqueFileName);
   }
+  
 });
 
 //Configuración de Multer como middleware
@@ -64,4 +66,6 @@ app.use(cors({origin: 'http://127.0.0.1:5500/'}))
 const port = 3000;
 app.listen(port, () => {
   console.log(`Servidor en el puerto ${port}`);
+  console.log();
+  console.log("coño");
 });

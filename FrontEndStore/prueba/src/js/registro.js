@@ -90,6 +90,45 @@ inputs.forEach((input) => {
 /* Evento de submit y aparicion de mensajes de error y exito */ 
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
+
+	let usuarioInp = document.getElementById('usuario').value;
+	let nomInp= document.getElementById('nombre').value;
+	let emailInp = document.getElementById('correo').value;
+	let telefonoInp = document.getElementById('telefono').value;
+	let passwordInp= document.getElementById('password').value;
+	
+	/*const formData = {
+		usuario: e.target[0],
+		nombre: e.target[1],
+		password: e.target[2],
+		email: e.target[3],
+		telefono: e.target[4]
+	}*/
+
+	const formData = new FormData();
+	formData.append('usuario', usuarioInp);
+	formData.append('nombre', nomInp);
+	formData.append('password', passwordInp);
+	formData.append('email', emailInp);
+	formData.append('telefono', telefonoInp);
+
+
+	console.log('formdata: ')
+	console.log(formData);
+
+	fetch('http://localhost:3000/usuarios/registro', {
+		method: 'POST',
+		body: formData,
+		mode: 'no-cors'
+	})
+	.then(response => response.json())
+	.then(data => {
+		console.log('Datos : ' + data);
+	})
+	.catch(error => {
+		console.log('Hay un error: ' + error);
+	});
+
 	const terminos = document.getElementById('terminos');
 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
 		formulario.reset();
@@ -111,7 +150,7 @@ formulario.addEventListener('submit', (e) => {
 
 
 ///INICIO DE SESION///
-
+/*
 const sesionInit = document.getElementById('user');
 const sesionModal  = document.getElementById('userModal');
 const closeSesionModal = document.getElementById('closeSesionModal');
@@ -122,4 +161,5 @@ sesionInit.addEventListener('click', () => {
 
 closeSesionModal.addEventListener('click', () => {
 	document.getElementById('userModal').classList.remove('display_flex');
-})
+});
+*/

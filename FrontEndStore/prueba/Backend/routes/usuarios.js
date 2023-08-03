@@ -6,8 +6,8 @@ const Usuario = require('../models/Usuario');
 router.post('/registro', async (req, res) => {
   console.log('hicieste un post a register wachin')
 
-  res.status(201)
-  res.send('done')
+  res.status(201);
+  res.send('done');
   // try {
   //   // Obtener los datos del formulario de registro
   //   const { nombre, email, contraseña } = req.body;
