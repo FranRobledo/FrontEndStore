@@ -1,3 +1,14 @@
+Sobre el repositorio:
+
+La branch main contiene el proyecto base con el frontend terminado (version 0.1.3), sin el backend. Todavia
+no se desarrollaba un backend para el proyecto
+
+La branch pruebas contiene todos los avances del proyecto en cuanto el backend, tambien algunas
+correcciones al frontend, el codigo del backend no se va a pushear a la branch main hasta que se obtenga
+una version definitiva de este.
+
+
+
 //Para instalar el framework de multer para la subida de archivos desde el administrador de archivos
 npm i express ejs multer
 
