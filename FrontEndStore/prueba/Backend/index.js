@@ -7,11 +7,9 @@ const uuid = require('uuid');
 const cors = require('cors')
 
 //Configuración de la conexión a la base de datos
-const mongouser = 'fran';
-const mongopassword = 'caca';
-const uri = `mongodb://${mongouser}:${mongopassword}@localhost:27017/?authSource=admin`;
+const {Config} = require('../Backend/config/index')
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(Config.mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Base de datos conectada'))
   .catch(e => console.log('Error de conexión', e));
 
@@ -51,14 +49,14 @@ app.use(multer({
 
 //Rutas y middleware
 const indexRoutes = require('./routes/index.routes.js');
-const userRoutes = require('./routes/usuarios');
+const userRoutes = require('./routes/users.routes.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRoutes);
-app.use('/usuarios', userRoutes);
+app.use('/users', userRoutes);
 
 app.use(cors({origin: 'http://127.0.0.1:5500/'}))
 
@@ -66,6 +64,4 @@ app.use(cors({origin: 'http://127.0.0.1:5500/'}))
 const port = 3000;
 app.listen(port, () => {
   console.log(`Servidor en el puerto ${port}`);
-  console.log();
-  console.log("coño");
 });

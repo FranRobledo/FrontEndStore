@@ -2,7 +2,21 @@ const express = require('express');
 const router = express.Router();
 const Usuario = require('../models/Usuario');
 
+const {renderSignUpForm, signUp, renderSigninForm, signin, logOut} = require('../controller/user.controller');
+
+router.get('/signup', renderSignUpForm);
+
+router.post('/signup', signUp); 
+
+router.get('/signin', renderSigninForm);
+
+router.post('/signup', signin);
+
+router.get('/logout', logOut);
+
 // Ruta para registrar un nuevo usuario
+
+/*
 router.post('/registro', async (req, res) => {
   console.log('hicieste un post a register wachin')
 
@@ -27,5 +41,7 @@ router.post('/registro', async (req, res) => {
   //   res.status(500).json({ error: 'Error al registrar el usuario' });
   // }
 });
+*/
+
 
 module.exports = router;

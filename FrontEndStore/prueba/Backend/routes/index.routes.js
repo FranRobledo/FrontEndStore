@@ -8,8 +8,6 @@ router.get('/', (req, res) => {
 
 router.post('/upload', (req, res) => {
     console.log('Imagen cargada', req.file, req.filename);
-    const imgname = res;
-    
 });
 
 module.exports = router;
