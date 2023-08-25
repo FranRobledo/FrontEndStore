@@ -9,6 +9,7 @@ userCtrl.renderSignUpForm = (req, res) => {
 
 userCtrl.signUp = (req, res) => {
     res.send('signup');
+    console.log("ñoki");
 };
 
 userCtrl.renderSigninForm = (req, res) => {
