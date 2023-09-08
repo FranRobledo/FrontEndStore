@@ -3,13 +3,32 @@ const path = require('path');
 
 const userCtrl = {};
 
+const User = require('../models/Usuario')
+
 userCtrl.renderSignUpForm = (req, res) => {
     res.render('registro');
 };
 
-userCtrl.signUp = (req, res) => {
-    res.send('signup');
-    console.log("ñoki");
+userCtrl.signup = (req, res) => {
+    errors = [];
+    const {name, email, password, confirm_password} = req.body;
+    if (password != confirm_password) {
+        errors.push ({text: 'Password do not match'});
+    }
+    if (password.lenght < 4) {
+        errors.push({text: 'Password must be at least 4 caracters'});
+    }
+    if (errors.lenght > 0) {
+        res.render('signup', {
+            errors,
+            name, 
+            email,
+            user
+        })
+    } else {
+        res.send('signup succesfully');
+    }
+
 };
 
 userCtrl.renderSigninForm = (req, res) => {

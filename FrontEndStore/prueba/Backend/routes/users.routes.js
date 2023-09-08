@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const Usuario = require('../models/Usuario');
 
-const {renderSignUpForm, signUp, renderSigninForm, signin, logOut} = require('../controller/user.controller');
+const {renderSignUpForm, signup, renderSigninForm, signin, logOut} = require('../controller/user.controller');
 
 router.get('/signup', renderSignUpForm);
 
-router.post('/signup', signUp); 
+router.post('/signup', signup); 
 
 router.get('/signin', renderSigninForm);
 
