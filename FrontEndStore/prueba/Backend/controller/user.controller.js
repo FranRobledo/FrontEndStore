@@ -9,7 +9,7 @@ userCtrl.renderSignUpForm = (req, res) => {
     res.render('registro');
 };
 
-userCtrl.signup = (req, res) => {
+userCtrl.signup = async (req, res) => {
     errors = [];
     const {name, email, password, confirm_password} = req.body;
     if (password != confirm_password) {
@@ -26,7 +26,10 @@ userCtrl.signup = (req, res) => {
             user
         })
     } else {
-        res.send('signup succesfully');
+        const emailUser = await User.findOne({email: email});
+        if (emailUser) {
+            
+        }
     }
 
 };

@@ -51,12 +51,16 @@ app.use(multer({
 const indexRoutes = require('./routes/index.routes.js');
 const userRoutes = require('./routes/users.routes.js');
 
+const userRouter = require('./models/Usuario');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRoutes);
 app.use('/users', userRoutes);
+
+app.use('/users/signup', userRouter);
 
 app.use(cors({origin: 'http://127.0.0.1:5500/'}))
 
